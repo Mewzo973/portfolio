@@ -1,0 +1,265 @@
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantit que le body prend toute la hauteur de l'écran */
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Titres */
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+h1 {
+    font-size: 50px;
+    color: #222;
+}
+h2 {
+    font-size: 30px;
+    color: #555;
+}
+
+/* Menu de navigation */
+nav {
+    background-color: #333;
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #2ecc71;
+    background-color: #1b7741;
+    transition: background-color 0.3s;
+}
+
+/* Texte principal */
+.text-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+}
+
+/* Section générale pour occuper toute la hauteur */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Chaque section occupe toute la hauteur de l'écran */
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Section "À propos de moi" */
+.about-cv-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.about-me {
+    flex: 1;
+    min-width: 300px;
+    background-color: #333; /* Couleur de fond sombre */
+    color: #fff; /* Couleur du texte claire pour contraster avec le fond sombre */
+    padding: 20px;
+    border-radius: 8px; /* Bordure arrondie pour plus de douceur */
+}
+
+/* Améliorer l'apparence du titre à l'intérieur de la section */
+.about-me h2 {
+    font-size: 28px;
+    color: #2ecc71; /* Couleur du titre en vert */
+    margin-bottom: 15px;
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+}
+.cv-image {
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Section "Projets" */
+.project-detail {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre verticalement */
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%; /* Assure que la section prend toute la largeur */
+    min-height: 100vh; /* Prend toute la hauteur de l'écran */
+    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur et hauteur */
+}
+
+
+.project-detail h2 {
+    font-size: 28px;
+    margin-bottom: 0px; /* Réduit l'espace sous le titre */
+    color: #444;
+    width: 100%;
+}
+
+.logo-img {
+    display: block; /* Permet à l'image de se comporter comme un bloc */
+    margin: 15px auto; /* Centre horizontalement avec auto */
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/**/
+.project-image {
+    width: 200px; 
+    height: auto;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.project-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Section Stage */
+.stage-detail {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    color: #fff;
+}
+.stage-detail h1 {
+    font-size: 36px;
+    color: #333;
+}
+.stage-detail h2 {
+    font-size: 28px;
+    color: #444;
+    margin-top: 20px;
+}
+.stage-detail p{
+    background-color: #333; /* Couleur de fond sombre */
+    color: #fff; /* Couleur du texte claire pour contraster avec le fond sombre */
+    padding: 20px;
+    border-radius: 8px; /* Bordure arrondie pour plus de douceur */
+
+}
+.stage-detail ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #333; /* Couleur de fond sombre */
+    color: #fff; /* Couleur du texte claire pour contraster avec le fond sombre */
+    padding: 20px;
+    border-radius: 8px; /* Bordure arrondie pour plus de douceur */
+}
+.stage-detail ul li {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 5px 0;
+}
+.stage-detail a {
+    color: #2ecc71;
+    text-decoration: none;
+    font-size: 18px;
+}
+.stage-detail a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+footer a {
+    color: #3498db;
+}
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-cv-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cv-image {
+        max-width: 300px;
+    }
+    .about-me p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    nav a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+    .text-container h1 {
+        font-size: 40px;
+    }
+    .about-me h2 {
+        font-size: 24px;
+    }
+    .about-me p {
+        font-size: 15px;
+    }
+    .project-image {
+        width: 150px;
+    }
+}
+@media (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    .text-container h1 {
+        font-size: 30px;
+    }
+    .about-me p {
+        font-size: 14px;
+    }
+    .project-image {
+        width: 120px;
+    }
+}
