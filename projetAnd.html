@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Android</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Projet Android - GSB : Gestion des RDV</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS global -->
 </head>
 <body>
 
@@ -16,36 +16,41 @@
         <a href="veille.html">Veille Technologique</a>
     </nav>
 
-    <!-- Section Introduction du projet -->
-    <div class="project-intro">
-        <h1>Projet Android</h1>
-        <p>Ce projet Android consiste à créer une application mobile permettant aux utilisateurs de gérer leurs tâches quotidiennes de manière efficace et intuitive.</p>
-        <img src="android_project_image.png" alt="Image du projet Android" class="project-image">
-    </div>
+    <!-- Contenu du projet Android -->
+    <section class="project-detail">
+        <h1>GSB : Gestion des RDV</h1>
+        <div class="project-description">
+            <p><strong>Application de gestion des RDV pour les visiteurs médicaux</strong></p>
+            <p>Cette application, réalisée avec Android Studio et une base de données SQLite embarquée, permet de gérer les rendez-vous des professionnels médicaux. Elle inclut plusieurs fonctionnalités importantes comme l'enregistrement des professionnels, la prise de RDV, l'affichage des plannings, et la recherche de professionnels par ville ou code postal.</p>
+        </div>
 
-    <!-- Section Détails Techniques -->
-    <div class="project-details">
-        <h2>Détails Techniques</h2>
-        <p>Cette application a été développée en utilisant Android Studio et le langage Kotlin. Voici quelques-unes des fonctionnalités clés :</p>
+        <h2>Technologies utilisées</h2>
         <ul>
-            <li>Création, modification et suppression de tâches.</li>
-            <li>Notifications pour rappeler les tâches à accomplir.</li>
-            <li>Interface utilisateur fluide et réactive.</li>
-            <li>Base de données locale pour stocker les tâches.</li>
+            <li>Android Studio</li>
+            <li>SQLite (base de données embarquée)</li>
+            <li>Java et XML pour l'interface et la logique</li>
         </ul>
-    </div>
 
-    <!-- Section Téléchargement du projet -->
-    <div class="project-download">
-        <h2>Téléchargez l'application</h2>
-        <p>Vous pouvez télécharger le fichier APK de l'application en cliquant sur le lien ci-dessous :</p>
-        <a href="project_android.apk" download="Projet-Android.apk" class="download-link">Télécharger l'APK</a>
-    </div>
+        <h2>Fonctionnalités principales</h2>
+        <ul>
+            <li>Enregistrement d'un professionnel médical (nom, prénom, spécialité, adresse, contact)</li>
+            <li>Prise de rendez-vous (choix de la date, de l'heure et du professionnel)</li>
+            <li>Affichage du planning d'une journée</li>
+            <li>Recherche de professionnels par ville ou code postal</li>
+        </ul>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Sugrim Kevin | Tous droits réservés.</p>
-    </footer>
+        <h2>Maquettes de l'application</h2>
+        <div class="mockup-container">
+            <img src="mockup1.png" alt="Maquette de l'application 1" class="mockup-img">
+            <img src="mockup2.png" alt="Maquette de l'application 2" class="mockup-img">
+        </div>
+
+        <h2>Télécharger les documents</h2>
+        <p>Vous pouvez télécharger le cahier des charges et les documents relatifs au projet :</p>
+        <a href="cahier_des_charges.pdf" download="Cahier-des-charges-GSB.pdf">Télécharger le Cahier des charges</a>
+        <a href="maquettes.pdf" download="Maquettes-Application.pdf">Télécharger les maquettes</a>
+
+    </section>
 
 </body>
 </html>
