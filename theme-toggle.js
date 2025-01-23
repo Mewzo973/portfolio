@@ -1,4 +1,4 @@
-<script>
+
     // Récupère le bouton et l'état initial
     const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
@@ -20,4 +20,5 @@
         // Sauvegarde le choix de l'utilisateur
         localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
     });
-</script>
+
+
