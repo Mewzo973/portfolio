@@ -274,6 +274,45 @@ footer a {
 footer a:hover {
     color: #fff;
 }
+/* Thème sombre */
+body.dark-theme {
+    background-color: #121212; /* Fond sombre */
+    color: #f5f5f5; /* Texte clair */
+}
+
+/* Thème sombre pour le menu */
+body.dark-theme nav {
+    background-color: #1e1e1e; /* Fond sombre */
+    color: #fff;
+}
+
+body.dark-theme nav a {
+    color: #2ecc71;
+}
+body.dark-theme nav a:hover {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+/* Thème sombre pour les sections */
+body.dark-theme section {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+/* Thème sombre pour les boutons */
+body.dark-theme button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #2ecc71;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+body.dark-theme button:hover {
+    background-color: #2ecc71;
+    color: #1e1e1e;
+}
 
 /* Responsive design spécifique pour la page Android */
 @media (max-width: 768px) {
