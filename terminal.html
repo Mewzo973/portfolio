@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portefolio</title>
+    <link rel="shortcut icon" href="profil.ico" />
+    <style>
+        body {
+            background-color: #000000;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        const terminal = document.getElementById('terminal');
+        const header = document.getElementById('terminal-header');
+        const input = document.getElementById('command-input');
+        const output = document.getElementById('output');
+
+        const files = {
+            'Projet': 'Dans le cadre de mon baccalauréat, j\'ai participé avec des camarades à un projet de création d\'entreprise de réparation informatique. Notre objectif était de concevoir une entreprise de A à Z, de sa création administrative jusqu\'à la gestion des clients et la réparation du matériel.<br><br>Mon rôle au sein de ce projet était celui de chef de projet. J\'étais responsable de la coordination des différents membres de l\'équipe, de la direction des opérations a la distribution des tâches, afin d\'assurer le bon fonctionnement de l\'entreprise.<br><br>Ce projet a été une expérience très enrichissante qui m\'a permis de découvrir les aspects concrets du travail d\'équipe et de développer mes compétences en gestion de projet.<br><br>---<br><br>Lors de mon second stage de BTS, j\'ai eu l\'opportunité de concevoir et de déployer un réseau d\'administration en conditions réelles au sein d\'une entreprise. Ce projet a débuté par la création d\'une cartographie détaillée du réseau, incluant l\'identification de tous les équipements, la définition de l\'usage du réseau afin de déterminer sa topologie, le choix du matériel nécessaire, ainsi que la création des plages d\'adresses IP et la mise en place des règles de sécurité.<br><br>Dans un second temps, j\'ai procédé à la mise en œuvre de cette cartographie, depuis la configuration du switch jusqu\'à la modification des adresses IP des serveurs, en passant par la création des règles de sécurité sur un pare-feu OpnSense.<br><br>Ce stage a été une expérience très formatrice à double titre. Non seulement il m\'a permis de développer mes compétences en conception et administration de réseaux, mais il m\'a également donné l\'occasion de mettre en pratique les connaissances théoriques acquises en cours.',
+            'README': 'Je m\'appelle Alexis Damico et je suis actuellement en seconde ann\u00e9e de BTS SIO (Services Informatiques aux Organisations),<br>sp\u00e9cialit\u00e9 SISR (Solutions d\'Infrastructure, Syst\u00e8mes et R\u00e9seaux).<br>J\'ai toujours eu un fort int\u00e9r\u00eat pour l\'informatique et une grande curiosit\u00e9 pour les nouvelles technologies.<br>C\'est donc tout naturellement que je me suis orient\u00e9 vers cette formation apr\u00e8s avoir obtenu mon bac professionnel Syst\u00e8mes Num\u00e9riques avec la mention assez bien.<br><br>Au cours des cinq derni\u00e8res ann\u00e9es, mes \u00e9tudes m\'ont permis d\'explorer de nombreux aspects du r\u00e9seau.<br> Gr\u00e2ce \u00e0 mon bac professionnel, j\'ai eu l\'opportunit\u00e9 de r\u00e9aliser cinq stages,<br> auxquels se sont ajout\u00e9s deux autres durant mon BTS, renfor\u00e7ant ainsi mon exp\u00e9rience et mes comp\u00e9tences.',
+            'CV': 'Voici mon CV, si vous souhaitez me contacter n\'h\u00e9sitez pas a m\'envoyer un mail.<br><br><br><embed src="CV Portefolio.pdf" width="800" height="500" type="application/pdf"/>',
+            
+		'Veille': '<h3>Le mod\u00e8le DeepSeek R1 a tout simplement \u00e9chou\u00e9 \u00e0 100% des attaques lanc\u00e9es par ces chercheurs en s\u00e9curit\u00e9</h3><a>Par Alexandre Boero, Journaliste-reporter, responsable de l\actu.</a><br><a>Publi\u00e9 le 03 f\u00e9vrier 2025 </a><br><br><a>Les chercheurs de Cisco ont mis \u00e0 rude \u00e9preuve le mod\u00e8le d\'intelligence artificielle chinois DeepSeep R1. S\il est consid\u00e9r\u00e9 comme l\'un des plus prometteurs du march\u00e9, il livre des r\u00e9sultats de s\u00e9curit\u00e9 catastrophiques.</a><br><br><a  href="https://www.clubic.com/actualite-552152-le-modele-deepseek-r1-a-tout-simplement-echoue-a-100-des-attaques-lancees-par-ces-chercheurs-en-securite.html">lire l\'article</a><h3>---</h3>'
+        };
+
+        function makeDraggable(header, windowElement) {
+            let isDragging = false, offsetX, offsetY;
+            header.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                offsetX = e.clientX - windowElement.offsetLeft;
+                offsetY = e.clientY - windowElement.offsetTop;
+            });
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    windowElement.style.left = e.clientX - offsetX + 'px';
+                    windowElement.style.top = e.clientY - offsetY + 'px';
+                }
+            });
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+        }
+
+        makeDraggable(header, terminal);
+
+        input.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                const command = input.value;
+                output.innerHTML += `<div>$ ${command}</div>`;
+                handleCommand(command);
+                input.value = '';
+            }
+        });
+
+        function handleCommand(cmd) {
+            const args = cmd.trim().split(' ');
+            if (args[0] === 'nano' && args[1] && files[args[1]]) {
+                openFileWindow(args[1], files[args[1]]);
+                output.innerHTML += `<div>Opening ${args[1]}...</div>`;
+            } else if (cmd === 'ls') {
+                output.innerHTML += `<div>${Object.keys(files).join('  ')}</div>`;
+            } else if (cmd === 'help') {
+                output.innerHTML += '<div>Available commands: help, clear, nano [file], ls</div>';
+            } else if (cmd === 'clear') {
+                output.innerHTML = '';
+            } else {
+                output.innerHTML += `<div>Command not found: ${cmd}</div>`;
+            }
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        function openFileWindow(fileName, content) {
+            const newWindow = document.createElement('div');
+            newWindow.className = 'window';
+
+            const header = document.createElement('div');
+            header.className = 'window-header';
+
+            const title = document.createElement('span');
+            title.textContent = fileName;
+
+            const controls = document.createElement('div');
+            controls.className = 'window-controls';
+
+            const closeButton = document.createElement('button');
+            closeButton.className = 'control-button close-button';
+            closeButton.title = 'Close';
+            closeButton.addEventListener('click', () => {
+                newWindow.remove();
+            });
+
+            controls.appendChild(closeButton);
+
+            header.appendChild(title);
+            header.appendChild(controls);
+
+            const contentDiv = document.createElement('div');
+            contentDiv.style.padding = '10px';
+            contentDiv.innerHTML = content;
+
+            newWindow.appendChild(header);
+            newWindow.appendChild(contentDiv);
+
+            document.body.appendChild(newWindow);
+            makeDraggable(header, newWindow);
+        }
+    </script>
+</body>
+</html>
