@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet GSB - Site Web</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS global -->
+    <!-- Lien vers le framework Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJt3W8X2Z6z8vE6vYZc0wU5XNNhA2oUpC3Cm8d43DgCmZJScG4bcNnA0vGv6" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Menu de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">GSB - Médicaments et Activités</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#toMain">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#toProjet">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#toStage">Stage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="veille.html">Veille Technologique</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenu du projet GSB -->
+    <section class="container my-5">
+        <h1>Site Web GSB</h1>
+        <div class="project-description">
+            <p><strong>Développement d'un site web pour la gestion des médicaments et des activités de GSB</strong></p>
+            <p>Ce projet consiste à créer une plateforme web pour la gestion des médicaments fabriqués par GSB et des activités proposées par l'entreprise. Le site permet aux utilisateurs de consulter des informations détaillées sur les médicaments, leurs effets thérapeutiques, leurs effets secondaires et leurs interactions avec d'autres médicaments. De plus, le site propose des activités complémentaires, avec la possibilité de s'inscrire à ces activités.</p>
+        </div>
+
+        <h2>Technologies utilisées</h2>
+        <ul>
+            <li><strong>PHP</strong> - Langage de programmation principal utilisé pour la logique métier et le back-end du site.</li>
+            <li><strong>MVC</strong> - Architecture du projet, divisée en trois parties : Modèle, Vue et Contrôleur, permettant une gestion claire et évolutive du projet.</li>
+            <li><strong>API REST</strong> - Utilisée pour l'accès à la base de données, permettant une gestion efficace des données côté serveur.</li>
+            <li><strong>Bootstrap</strong> - Framework CSS utilisé pour rendre le site responsive et agréable visuellement sur différents appareils.</li>
+            <li><strong>GitHub</strong> - Plateforme utilisée pour la gestion de version du code, avec un travail en binôme et une méthodologie agile.</li>
+        </ul>
+
+        <h2>Fonctionnalités principales</h2>
+        <ul>
+            <li>Présentation des médicaments fabriqués par GSB, avec détails sur les effets thérapeutiques, secondaires et les interactions avec d'autres médicaments.</li>
+            <li>Inscription aux activités complémentaires proposées par GSB.</li>
+            <li>Mentions légales du site web, respectant les obligations juridiques et les droits d'image.</li>
+        </ul>
+
+        <h2>Procédé de développement</h2>
+        <p>Le projet a été réalisé en suivant la méthode agile, avec un travail en binôme. Le processus de développement a été structuré en sprints, permettant d'avancer de manière progressive tout en ajustant les fonctionnalités et l'interface utilisateur au fur et à mesure. GitHub a été utilisé pour la gestion de version et le suivi de l'avancement du projet.</p>
+
+        <h2>Télécharger les documents</h2>
+        <!--<p>Vous pouvez télécharger les documents relatifs au projet :</p>-->
+        <a href="rapport-gsb.pdf" download="rapport-gsb.pdf" class="btn btn-primary">Télécharger le Rapport</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-3">
+        <div class="container text-center">
+            <p>&copy; 2025 GSB - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- Lien vers les scripts JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybC3Rz2Q6M06da6dFfb4hkcjYZx6LJ7M2MZ9SKJ9K9bZfGvWu" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0gU1pP5E2VHJISvDgXx9h4j2c9Ovl4Qy9v6nY3Tzdf8Atwtd" crossorigin="anonymous"></script>
+</body>
+</html>
