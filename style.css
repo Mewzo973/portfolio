@@ -83,8 +83,8 @@ section {
 .about-me {
     flex: 1;
     min-width: 300px;
-    background-color: #333; /* Couleur de fond sombre */
-    color: #fff; /* Couleur du texte claire pour contraster avec le fond sombre */
+    background-color: #fdfdfd; /* Couleur de fond sombre */
+    color: #333; /* Couleur du texte claire pour contraster avec le fond sombre */
     padding: 20px;
     border-radius: 8px; /* Bordure arrondie pour plus de douceur */
 }
@@ -99,7 +99,7 @@ section {
 .about-me p {
     font-size: 18px;
     line-height: 1.6;
-    color: #fff;
+    color: #333;
 }
 .cv-image {
     max-width: 400px;
