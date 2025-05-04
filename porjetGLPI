@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet GLPI - SUGRIM Kevin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJt3W8X2Z6z8vE6vYZc0wU5XNNhA2oUpC3Cm8d43DgCmZJScG4bcNnA0vGv6" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html#toMain">Accueil</a>
+        <a href="index.html#toProjet">Projets</a>
+        <a href="index.html#toStage">Stage</a>
+        <a href="veille.html">Veille Technologique</a>
+    </nav>
+
+    <section class="container my-5">
+        <h1>Projet GLPI</h1>
+        <p><strong>Nom :</strong> SUGRIM Kevin</p>
+        <p><strong>Classe :</strong> BTS SIO 2</p>
+
+        <h2>1. Introduction</h2>
+        <p>Dans le cadre de notre formation en BTS SIO, il nous a été demandé de mettre en place un environnement de gestion de parc informatique à l’aide de GLPI. L’objectif principal était de pouvoir inventorier automatiquement différents types de périphériques. Pour gagner du temps, nous avons utilisé une machine virtuelle avec GLPI déjà installé.</p>
+
+        <h2>2. Redirection de ports (Port Forwarding)</h2>
+        <p>Pour permettre l’accès à l’interface GLPI depuis une autre machine du réseau, nous avons configuré une redirection de ports sur la machine virtuelle :</p>
+        <ul>
+            <li>Le port <strong>9980</strong> de la machine hôte a été redirigé vers le port <strong>80</strong> de la VM contenant GLPI.</li>
+        </ul>
+        <p><strong>Résultats :</strong></p>
+        <ul>
+            <li>Accès depuis la machine hôte : <strong>réussi</strong></li>
+        </ul>
+
+        <h2>3. Recensement automatique de deux machines Windows</h2>
+        <p>Nous avons installé et configuré l’agent GLPI sur deux machines Windows.</p>
+        <p><strong>Étapes réalisées :</strong></p>
+        <ul>
+            <li>Modification du fichier <code>agent.cfg</code> pour chaque machine</li>
+            <li>Exécution du script <code>glpi-agent.bat</code></li>
+        </ul>
+        <p><strong>Résultat :</strong> Les deux machines ont bien été recensées automatiquement et apparaissent dans le tableau de bord GLPI.</p>
+
+        <h2>4. Recensement d’une machine virtuelle</h2>
+        <p>Une VM Windows 10 a été créée sur l’hôte. Après installation et configuration de l’agent GLPI :</p>
+        <ul>
+            <li>La machine a été recensée malgré une modification des IP causée par un problème avec la box SIO.</li>
+            <li>L’inventaire a été transmis avec succès à GLPI.</li>
+        </ul>
+
+        <h2>5. Création et gestion d’un ticket</h2>
+        <p>Pour tester la gestion de tickets :</p>
+        <ul>
+            <li>Un ticket a été créé à partir d’un compte utilisateur normal</li>
+            <li>Il a ensuite été visualisé et traité depuis le compte administrateur</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>Ce projet nous a permis de découvrir l’ensemble du processus de recensement automatique via GLPI, ainsi que la gestion des incidents. L’installation et la configuration des agents GLPI sur différents types d’appareils nous ont apporté une expérience concrète en administration réseau.</p>
+    </section>
+
+    <footer class="bg-light py-3">
+        <div class="container text-center">
+            <p>&copy; 2025 SUGRIM Kevin - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybC3Rz2Q6M06da6dFfb4hkcjYZx6LJ7M2MZ9SKJ9K9bZfGvWu" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0gU1pP5E2VHJISvDgXx9h4j2c9Ovl4Qy9v6nY3Tzdf8Atwtd" crossorigin="anonymous"></script>
+</body>
+</html>
