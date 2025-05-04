@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Prestashop</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJt3W8X2Z6z8vE6vYZc0wU5XNNhA2oUpC3Cm8d43DgCmZJScG4bcNnA0vGv6" crossorigin="anonymous">
 </head>
 <body>
+
     <!-- Menu de navigation -->
     <nav>
         <a href="index.html#toMain">Accueil</a>
@@ -14,15 +16,59 @@
         <a href="index.html#toStage">Stage</a>
         <a href="veille.html">Veille Technologique</a>
     </nav>
-    <header>
-        <h1>Projet Prestashop</h1>
-    </header>
-    
-    <main>
-        <section class="maintenance-message">
-            <h2>Cette page est en maintenance</h2>
-            <p>Nous travaillons actuellement sur le contenu de cette page. Veuillez revenir plus tard.</p>
-        </section>
-    </main>
+
+    <!-- Contenu du projet Prestashop -->
+    <section class="container my-5">
+        <h1>Projet Prestashop - Boutique queDuGeek</h1>
+        <div class="project-description">
+            <p><strong>Création d'une boutique e-commerce avec PrestaShop pour la vente de produits high-tech, informatiques et gaming.</strong></p>
+            <p>Ce projet avait pour objectif de concevoir une boutique en ligne fonctionnelle à l'aide de PrestaShop, en respectant les exigences d'un site professionnel : structure claire, navigation fluide, optimisation SEO, et design responsive. Le thème de la boutique, nommé <strong>queDuGeek</strong>, a été choisi librement.</p>
+        </div>
+
+        <h2>Fonctionnalités développées</h2>
+        <ul>
+            <li>Création de catégories (Informatique, Gaming, Accessoires)</li>
+            <li>Optimisation SEO : balises Meta, URLs simplifiées, contenu descriptif</li>
+            <li>Page d’accueil personnalisée avec produits mis en avant</li>
+            <li>Design responsive compatible mobile/tablette</li>
+            <li>Navigation fluide avec menu horizontal clair</li>
+        </ul>
+
+        <h2>Technologies et outils utilisés</h2>
+        <ul>
+            <li><strong>PrestaShop</strong> - CMS e-commerce</li>
+            <li><strong>HTML/CSS</strong> - Personnalisation du front-end</li>
+            <li><strong>SEO</strong> - Référencement naturel optimisé</li>
+            <li><strong>Photoshop / Outils visuels</strong> - Création de visuels produits</li>
+        </ul>
+
+        <h2>Captures d'écran</h2>
+        <p>Quelques aperçus de la boutique queDuGeek :</p>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <img src="acc.png" class="img-fluid rounded shadow-sm" alt="Accueil">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="categ1.png" class="img-fluid rounded shadow-sm" alt="Catégorie 1">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="seo1.png" class="img-fluid rounded shadow-sm" alt="SEO">
+            </div>
+        </div>
+
+        <h2>Rapport du projet</h2>
+        <iframe src="RapportPresta.pdf" width="100%" height="600px" frameborder="0"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-3">
+        <div class="container text-center">
+            <p>&copy; 2025 queDuGeek - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
